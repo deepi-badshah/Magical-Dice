@@ -53,7 +53,7 @@ class _MyAppState extends State<MyApp> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 20),
-                          child: x >= 4
+                          child: x >= 5
                               ? Text(
                                   'Congratulations\n You got \n 🍻$x🍻',
                                   style: const TextStyle(fontSize: 30),
@@ -88,16 +88,20 @@ class _MyAppState extends State<MyApp> {
                     x = Random().nextInt(6) + 1;
                     setState(() {});
                   },
-                  onLongPress: (() {
-                    x = 6;
-                    setState(() {});
-                  }),
                   style: ElevatedButton.styleFrom(
                     shadowColor: Colors.white,
                     backgroundColor: Colors.orange,
                     elevation: 00,
                   ),
                   child: const Text('Roll Me'),
+                ),
+                InkResponse(
+                  radius: 0,
+                  onTap: () {
+                    x = 6;
+                    setState(() {});
+                  },
+                  child: Container(height: 150),
                 ),
               ],
             ),

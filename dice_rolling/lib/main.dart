@@ -79,7 +79,7 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ),
                 const SizedBox(
-                  height: 50,
+                  height: 40,
                 ),
                 ElevatedButton(
                   onPressed: () {
@@ -89,9 +89,9 @@ class _MyAppState extends State<MyApp> {
                     setState(() {});
                   },
                   style: ElevatedButton.styleFrom(
-                    shadowColor: Colors.white,
+                    shadowColor: const Color.fromARGB(255, 231, 233, 235),
                     backgroundColor: Colors.orange,
-                    elevation: 00,
+                    elevation: 10,
                   ),
                   child: const Text('Roll Me'),
                 ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audio_cache.dart';
 
 import 'dart:math';
 
@@ -16,7 +15,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int x = 1;
-  final player = AudioCache();
   //Random random = Random();
 
   @override
@@ -85,7 +83,6 @@ class _MyAppState extends State<MyApp> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    player.play('Rolling_sound.mp3');
                     // AudioPlayer()
                     //     .play(AssetSource('assets/audio/Rolling_sound.mp3'));
                     x = Random().nextInt(6) + 1;
